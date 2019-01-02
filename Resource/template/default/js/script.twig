@@ -1,0 +1,29 @@
+{% block javascript %}
+    <script src="//unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+    <script>
+        $(function () {
+            var nextURL;
+
+            function updateNextURL(doc) {
+                nextURL = $(doc).find('ul.ec-pager a:contains("次へ")').attr('href');
+                // 2ページ目以降のカートボタンが動作しないので非表示
+                $(doc).find('li.ec-shelfGrid__item form, li.ec-shelfGrid__item .ec-productRole__btn').hide();
+            }
+
+            updateNextURL(document);
+
+            var $container = $('.ec-layoutRole__main').infiniteScroll({
+                path: function() {
+                    return nextURL;
+                },
+                append: '.ec-shelfRole',
+                history: false,
+                hideNav: '.ec-pagerRole',
+            });
+            
+            $container.on('load.infiniteScroll', function(event, response) {
+                updateNextURL(response);
+            });
+        });
+    </script>
+{% endblock %}
