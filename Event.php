@@ -19,6 +19,6 @@ class Event implements EventSubscriberInterface
     
     public function addAsset(TemplateEvent $event)
     {
-        $event->addSnippet('@InfiniteScroll4/default/js/script.twig');
+        $event->addSnippet('@InfiniteScroll/default/js/script.twig');
     }
 }
