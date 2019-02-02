@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\InfiniteScroll;
+namespace Plugin\InfiniteScroll4;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Eccube\Event\TemplateEvent;
@@ -19,6 +19,6 @@ class Event implements EventSubscriberInterface
     
     public function addAsset(TemplateEvent $event)
     {
-        $event->addSnippet('@InfiniteScroll/default/js/script.twig');
+        $event->addSnippet('@InfiniteScroll4/default/js/script.twig');
     }
 }

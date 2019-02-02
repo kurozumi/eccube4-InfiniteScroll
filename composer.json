@@ -1,5 +1,5 @@
 {
-  "name": "ec-cube/InfiniteScroll",
+  "name": "ec-cube/InfiniteScroll4",
   "version": "1.0.0",
   "description": "無限スクロールプラグイン for EC-CUBE4",
   "type": "eccube-plugin",
@@ -7,6 +7,6 @@
     "ec-cube/plugin-installer": "~0.0.7"
   },
   "extra": {
-    "code": "InfiniteScroll"
+    "code": "InfiniteScroll4"
   }
 }
